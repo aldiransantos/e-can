@@ -1,0 +1,446 @@
+/* Paleta de Cores */
+:root {
+    --rosa: #f71963;
+    --azul-claro: #00bbd4;
+    --azul-escuro: #142032;
+    --cinza-claro: #d6d8e0;
+    --cinza: #999;
+    --cinza-escuro: #808080;
+    --cinza-black: #363636;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Fabriga-Black;
+    src: url("../fonts/Fabriga-Black.otf");
+}
+
+@font-face {
+    font-family: Fabriga-BlackItalic;
+    src: url("../fonts/Fabriga-BlackItalic.otf");
+}
+
+@font-face {
+    font-family: Fabriga-Bold;
+    src: url("../fonts/Fabriga-Bold.otf");
+}
+
+@font-face {
+    font-family: Fabriga-BoldItalic;
+    src: url("../fonts/Fabriga-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: Fabriga-Italic;
+    src: url("../fonts/Fabriga-Italic.otf");
+}
+
+@font-face {
+    font-family: Fabriga-Light;
+    src: url("../fonts/Fabriga-Light.otf");
+}
+
+@font-face {
+    font-family: Fabriga-LightItalic;
+    src: url("../fonts/Fabriga-LightItalic.otf");
+}
+
+@font-face {
+    font-family: Fabriga-Medium;
+    src: url("../fonts/Fabriga-Medium.otf");
+}
+
+@font-face {
+    font-family: Fabriga-MediumItalic;
+    src: url("../fonts/Fabriga-MediumItalic.otf");
+}
+
+@font-face {
+    font-family: Fabriga-Regular;
+    src: url("../fonts/Fabriga-Regular.otf");
+}
+
+/* Estilos */
+html,
+body {
+    font-family: Fabriga-Regular;
+}
+
+p {
+    color: var(--cinza);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Fabriga-Black;
+    color: var(--cinza-black);
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    border-top: 2px solid var(--cinza);
+}
+
+#banner {
+    color: #fff;
+
+    background-image: url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-light .navbar-toggler {
+    padding: 0;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar button:focus {
+    outline: none;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-brand img {
+    width: 75%;
+}
+
+#banner .navbar button .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#banner .shopping {
+    color: #fff;
+    padding: 0;
+}
+
+#banner .shopping .basket {
+    position: relative;
+    border: 21px solid var(--rosa);
+    border-radius: 50%;
+}
+
+#banner .shopping .basket i {
+    position: absolute;
+    left: -11px;
+    top: -10px;
+    font-size: 20px;
+}
+
+#banner .shopping .basket .products {
+    position: absolute;
+    top: -23px;
+    left: 10px;
+
+    font-size: 12px;
+
+    background-color: #000;
+    border-color: #000;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 0px 5px;
+}
+
+#banner .shopping .basket .products .numberProducts {
+    color: #fff;
+}
+
+#banner .content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#banner .content h1,
+#banner .content p,
+#banner .content p strong {
+    color: #fff;
+}
+
+#banner .content p {
+    width: 240px;
+    font-family: Fabriga-Light;
+}
+
+#banner .content button {
+    margin-top: 20px;
+    padding: 0.375rem 40px;
+    background-color: var(--rosa);
+    border-color: var(--rosa);
+}
+
+#banner .content button i {
+    position: relative;
+    left: 8px;
+    top: 1px;
+}
+
+#produtos .content {
+    margin-bottom: 70px;
+}
+
+#produtos .content .info {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#produtos .content .info .saiba-mais {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+
+    text-align: center;
+    text-decoration: underline;
+    color: var(--rosa);
+}
+
+#produtos .content .carousel-indicators {
+    bottom: -50px;
+}
+
+#produtos .content .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+
+    background-color: var(--cinza);
+}
+
+#produtos .content .carousel-indicators .active {
+    position: relative;
+    margin: 0 4px;
+
+    background-color: var(--rosa);
+}
+
+#produtos .content .carousel-inner {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#produtos .content .card {
+    width: 100%;
+    height: 370px;
+}
+
+#produtos .content .card .wrap-image {
+    display: block;
+    height: 265px;
+}
+
+#produtos .content .card .wrap-image img {
+    max-height: 240px;
+    margin: 0 auto;
+}
+
+#diferenciais {
+    background-color: var(--rosa);
+}
+
+#diferenciais .content h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--azul-escuro);
+}
+
+#diferenciais .content .box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+#diferenciais .content .box .descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-left: 20px;
+}
+
+#diferenciais .content .box .descricao h4 {
+    color: var(--azul-escuro);
+}
+
+#o-teto .content {
+    padding-bottom: 20px;
+}
+
+#o-teto .content .logo {
+    position: relative;
+    display: block;
+    margin: 40px auto;
+}
+
+#o-teto .content .logo-video {
+    padding: 0;
+}
+
+#o-teto .content h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#o-teto .content h5 {
+    color: var(--rosa);
+}
+
+#blog .container {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#blog .container h3 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+#blog .container .banner {
+    width: 100%;
+}
+
+#blog .container .titulo {
+    margin: 14px auto;
+}
+
+#blog .container .periodo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#blog .container .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#blog .container .avatar p {
+    margin: 0 0 0 10px;
+
+    font-weight: bold;
+    color: var(--cinza-black);
+}
+
+#newsletter .container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#newsletter .container p {
+    margin: 20px 0;
+}
+
+#newsletter .form-group {
+    display: flex;
+}
+
+#newsletter .form-group input {
+    padding-right: 95px;
+
+    background-color: #f8f8f8;
+    border-color: #f8f8f8;
+}
+
+#newsletter .form-group input::placeholder {
+    color: var(--cinza);
+}
+
+#newsletter .form-group button {
+    position: absolute;
+    right: 15px;
+
+    padding: 0.375rem 18px;
+
+    background-color: var(--rosa);
+    border-color: var(--rosa);
+}
+
+#newsletter .form-group button i {
+    margin-right: 10px;
+}
+
+#rodape .footer-blue,
+#rodape .footer-gray {
+    padding-top: 40px;
+}
+
+#rodape .footer-blue {
+    background-color: var(--azul-escuro);
+}
+
+#rodape .footer-blue .content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#rodape .footer-blue .content div[class^="col"] {
+    padding-bottom: 40px;
+}
+
+#rodape .footer-blue .content h5 {
+    font-family: Fabriga-Light;
+    font-weight: 100;
+    color: var(--rosa);
+}
+
+#rodape .footer-blue .institucional ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#rodape .footer-blue .institucional ul li {
+    font-family: Fabriga-Light;
+    font-size: 14px;
+    list-style: none;
+}
+
+#rodape .footer-blue .institucional ul li a {
+    color: #fff;
+}
+
+#rodape .footer-blue .seguro div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#rodape .footer-blue .seguro div img:nth-child(2) {
+    margin: 0 10px;
+}
+
+#rodape .footer-blue .formas-pagamento img {
+    width: 90%;
+}
+
+#rodape .footer-blue .vtexomni div img {
+    width: 40px;
+}
+
+#rodape .footer-blue .vtexomni div img:not(:first-child) {
+    margin-left: 8px;
+}
+
+#rodape .footer-gray {
+    padding-bottom: 40px;
+    background-color: var(--cinza-claro);
+}
+
+#rodape .footer-gray p {
+    width: 80%;
+    margin: 0 auto 30px;
+
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--cinza-escuro);
+}
+
+#rodape .footer-gray div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
