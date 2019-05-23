@@ -63,7 +63,8 @@
 /* Estilos */
 html,
 body {
-    font-family: Fabriga-Regular;
+    font-family: Fabriga-Regular, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -82,6 +83,12 @@ hr {
     border-top: 2px solid var(--cinza);
 }
 
+/* .pulse {
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+    animation: pulse 2s infinite;
+} */
+
 #banner {
     color: #fff;
 
@@ -93,6 +100,10 @@ hr {
 
 #banner .navbar {
     padding: 0;
+}
+
+#banner .navbar-light .navbar-nav .nav-link {
+    font-family: Fabriga-Light;
 }
 
 #banner .navbar-light .navbar-toggler {
@@ -124,7 +135,7 @@ hr {
     width: 75%;
 }
 
-.navbar-collapse.collapse {
+#banner .navbar-collapse.collapse {
     padding: 0.5rem 1rem;
     background-color: rgb(255, 255, 255);
 }
@@ -204,13 +215,21 @@ hr {
     top: 1px;
 }
 
+#produtos {
+    background-color: #f0f0f0;
+}
+
 #produtos .content {
-    margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 
 #produtos .content .info {
     padding-top: 30px;
     text-align: center;
+}
+
+#produtos .content .card {
+    border-radius: 0;
 }
 
 #produtos .content .card .card-body .box {
@@ -225,7 +244,7 @@ hr {
 
 #produtos .content .card .card-body .box .old-price {
     text-decoration: line-through;
-    color: var(--cinza);  
+    color: var(--cinza);
 }
 
 #produtos .content .info .saiba-mais {
@@ -258,6 +277,8 @@ hr {
 }
 
 #produtos .content .carousel-inner {
+    width: 400px;
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -306,6 +327,11 @@ hr {
     color: var(--azul-escuro);
 }
 
+#diferenciais .content .box .descricao p,
+#diferenciais .content .box-smarthphone {
+    display: none;
+}
+
 #o-teto .content {
     padding-bottom: 20px;
 }
@@ -313,7 +339,7 @@ hr {
 #o-teto .content .logo {
     position: relative;
     display: block;
-    margin: 40px auto;
+    margin: 40px auto 40px;
 }
 
 #o-teto .content .logo-video {
@@ -322,7 +348,7 @@ hr {
 
 #o-teto .content h3 {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #o-teto .content h5 {
@@ -332,6 +358,10 @@ hr {
 #blog .container {
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+#blog .container div[class^="col"]:not(:first-child) {
+    display: none;
 }
 
 #blog .container h3 {
@@ -375,22 +405,22 @@ hr {
     margin: 20px 0;
 }
 
-#newsletter .form-group {
+#newsletter .container .form-group {
     display: flex;
 }
 
-#newsletter .form-group input {
+#newsletter .container .form-group input {
     padding-right: 95px;
 
     background-color: #f8f8f8;
     border-color: #f8f8f8;
 }
 
-#newsletter .form-group input::placeholder {
+#newsletter .container .form-group input::placeholder {
     color: var(--cinza);
 }
 
-#newsletter .form-group button {
+#newsletter .container .form-group button {
     position: absolute;
     right: 15px;
 
@@ -400,7 +430,7 @@ hr {
     border-color: var(--rosa);
 }
 
-#newsletter .form-group button i {
+#newsletter .container .form-group button i {
     margin-right: 10px;
 }
 
@@ -479,9 +509,250 @@ hr {
     color: var(--cinza-escuro);
 }
 
-#rodape .footer-gray div {
+#rodape .footer-gray .row div:nth-child(2) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .box-scroll {
+        position: absolute;
+        bottom: 4vh;
+
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .scroll-down {
+        padding: 8px 4px;
+        border: 2px solid #fff;
+        border-radius: 7px;
+    }
+
+    .dash {
+        position: relative;
+        padding: 0px 4px 0 3px;
+
+        font-size: 10px;
+        background-color: #fff;
+
+        animation-name: scrolling;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes scrolling {
+        0% {
+            top: -7px;
+        }
+        100% {
+            top: 4px;
+        }
+    }
+
+    .dash::before {
+        position: absolute;
+        left: 0px;
+        top: -4px;
+
+        padding: 3px;
+        border-radius: 50%;
+
+        background-color: #fff;
+        content: "";
+    }
+
+    .dash::after {
+        position: absolute;
+        left: 0px;
+        bottom: -4px;
+        padding: 3px;
+        border-radius: 50%;
+
+        background-color: #fff;
+        content: "";
+    }
+
+    .embed-responsive {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    #banner {
+        position: relative;
+        height: 65vh;
+    }
+
+    #banner .navbar {
+        padding: .5rem 1rem;
+    }
+
+    #banner .navbar-collapse.collapse {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #banner .navbar-nav {
+        margin-right: 20px;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        position: relative;
+        margin-right: 5rem;
+        justify-content: flex-end;
+    }
+
+    #banner .navbar-light .navbar-nav .nav-link,
+    #banner .navbar div .buscar .lupa {
+        color: #fff;
+    }
+
+    #banner .navbar-light .navbar-nav .nav-link:hover,
+    #banner .navbar div .buscar .lupa:hover {
+        color: var(--rosa);
+    }
+
+    #banner .navbar-light .navbar-nav .nav-link {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+        font-size: .875rem;
+    }
+
+    #banner .navbar .shopping {
+        position: absolute;
+        right: 1rem;
+    }
+
+    #banner .content p {
+        width: 300px;
+    }
+
+    #produtos .content .info .saiba-mais {
+        display: inline;
+    }
+
+    #diferenciais .content h2 {
+        margin-bottom: 20px;
+    }
+
+    #diferenciais .content .box .descricao {
+        width: 63%;
+    }
+
+    #diferenciais .content .box .descricao p,
+    #diferenciais .content .box-smarthphone {
+        display: block;
+        font-family: Fabriga-Light;
+        color: #fff;
+    }
+
+    #o-teto .content {
+        padding-bottom: 40px;
+    }
+
+    #o-teto .content .logo {
+        margin: 40px auto 25px;
+    }
+
+    #o-teto .content h3 {
+        font-size: 44px;
+        margin-bottom: 25px;
+    }
+
+    #blog .container {
+        padding-bottom: 40px;
+    }
+
+    #blog .container div[class^="col"]:not(:first-child) {
+        display: block;
+    }
+
+    #blog .container a:hover {
+        text-decoration-color: var(--rosa);
+        cursor: pointer;
+    }
+
+    #blog .container h3 {
+        font-size: 44px;
+    }
+
+    #blog .container .titulo {
+        font-size: 1rem;
+    }
+
+    #newsletter .container {
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    #newsletter .container h3 {
+        font-size: 44px;
+    }
+
+    #newsletter .container .form-group input {
+        padding-right: 125px;
+    }
+    
+    #rodape .footer-blue .content h5 {
+        font-size: 1rem;
+    }
+
+    #rodape .footer-blue .institucional ul li {
+        font-size: 11px;
+    }
+
+    #rodape .footer-blue .seguro div {
+        width: 80%;
+    }
+
+    #rodape .footer-blue .seguro div img:first-child {
+        width: 75px;
+    }
+
+    #rodape .footer-blue .seguro div img:nth-child(2) {
+        width: 60px;
+    }
+
+    #rodape .footer-blue .content {
+        width: 85%;
+    }
+
+    #rodape .footer-blue .formas-pagamento,
+    #rodape .footer-blue .vtexomni {
+        text-align: center;
+    }
+
+    #rodape .footer-blue .formas-pagamento img {
+        width: 80%;
+    }
+
+    #rodape .footer-blue .formas-pagamento div,
+    #rodape .footer-blue .vtexomni div {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50px;
+    }
+
+    #rodape .footer-gray {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #rodape .footer-gray p {
+        margin: 0 auto;
+    }
+
+    #rodape .footer-gray .row div:nth-child(2) {
+        justify-content: center;
+    }
+
+    #rodape .footer-gray .row div:nth-child(2) img {
+        margin: 0 20px;
+    }
 }
