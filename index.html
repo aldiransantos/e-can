@@ -34,16 +34,16 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#diferenciais">Diferenciais <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#produtos">Produtos</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline buscar"> <!-- my-2 my-lg-0 -->
+                    <input class="form-control mr-sm-2" style="display: none;" type="search" placeholder="Search" aria-label="Search">
+                    <a href="#" class="lupa"><i class="fab fa-sistrix"></i></a>
                 </form>
             </div>
         </nav>
@@ -83,10 +83,10 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="wrap-image">
-                                    <img src="assets/images/casaco.png" class="d-block" alt="...">
+                                    <img src="assets/images/casaco.png" class="d-block" alt="">
                                 </div>
                                 <p class="card-text">Casaco de Moletom Unisex</p>
-                                <span class="price">R$99.90</span>
+                                <div class="box"><span class="price">R$99.90</span></div>
                             </div>
                         </div>
                     </div>
@@ -94,10 +94,12 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="wrap-image">
-                                    <img src="assets/images/caderno.png" class="d-block" alt="...">
+                                    <img src="assets/images/caderno.png" class="d-block" alt="">
                                 </div>
                                 <p class="card-text">Notebook Moleskine Preto</p>
-                                <span class="old-price">R$39.90</span><span class="price">R$25.90</span>
+                                <div class="box">
+                                    <span class="old-price">R$39.90</span><span class="price">R$25.90</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,10 +107,10 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="wrap-image">
-                                    <img src="assets/images/caneca.png" class="d-block" alt="...">
+                                    <img src="assets/images/caneca.png" class="d-block" alt="">
                                 </div>
                                 <p class="card-text">Caneca VTEX</p>
-                                <span class="price">R$16.00</span>
+                                <div class="box"><span class="price">R$16.00</span></div>
                             </div>
                         </div>
                     </div>
