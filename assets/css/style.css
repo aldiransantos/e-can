@@ -502,7 +502,7 @@ hr {
     width: 40px;
 }
 
-#rodape .footer-blue .container .vtexomni div img:not(:first-child) {
+#rodape .footer-blue .container .vtexomni .redes-sociais a:not(:first-child) {
     margin-left: 8px;
 }
 
