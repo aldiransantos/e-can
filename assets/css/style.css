@@ -71,11 +71,7 @@ p {
     color: var(--cinza);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
     font-family: Fabriga-Black;
     color: var(--cinza-black);
 }
@@ -87,19 +83,17 @@ hr {
     border-top: 2px solid var(--cinza);
 }
 
-/* .pulse {
-    cursor: pointer;
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
-    animation: pulse 2s infinite;
-} */
-
 #banner {
     color: #fff;
 
-    background-image: url("../images/banner.png");
+    background-image: url("../images/banner-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#banner .container {
+    padding: 10px 0 0;
 }
 
 #banner .navbar {
@@ -191,8 +185,7 @@ hr {
 }
 
 #banner .content {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 15px;
 }
 
 #banner .content h1,
@@ -463,49 +456,53 @@ hr {
     background-color: var(--azul-escuro);
 }
 
-#rodape .footer-blue .content {
+#rodape .footer-blue .container {
     width: 80%;
     margin: 0 auto;
 }
 
-#rodape .footer-blue .content div[class^="col"] {
+#rodape .footer-blue .container div[class^="col"] {
     padding-bottom: 40px;
 }
 
-#rodape .footer-blue .content h5 {
+#rodape .footer-blue .container h5 {
     font-family: Fabriga-Light;
     font-weight: 100;
     color: var(--rosa);
 }
 
-#rodape .footer-blue .institucional ul {
+#rodape .footer-blue .container .institucional ul {
     padding-left: 0;
     margin-bottom: 0;
 }
 
-#rodape .footer-blue .institucional ul li {
+#rodape .footer-blue .container .institucional ul li {
     font-family: Fabriga-Light;
     font-size: 14px;
     list-style: none;
 }
 
-#rodape .footer-blue .institucional ul li a {
+#rodape .footer-blue .container .institucional ul li a {
     color: #fff;
 }
 
-#rodape .footer-blue .seguro div img:nth-child(2) {
+#rodape .footer-blue .container .institucional ul li a:hover {
+    text-decoration-color: var(--rosa);
+}
+
+#rodape .footer-blue .container .seguro div img:nth-child(2) {
     margin-left: 10%;
 }
 
-#rodape .footer-blue .formas-pagamento img {
+#rodape .footer-blue .container .formas-pagamento img {
     width: 90%;
 }
 
-#rodape .footer-blue .vtexomni div img {
+#rodape .footer-blue .container .vtexomni div img {
     width: 40px;
 }
 
-#rodape .footer-blue .vtexomni div img:not(:first-child) {
+#rodape .footer-blue .container .vtexomni div img:not(:first-child) {
     margin-left: 8px;
 }
 
@@ -625,11 +622,19 @@ hr {
 
     #banner {
         position: relative;
-        height: 65vh;
+        height: 60vh;
+
+        background-image: url("../images/banner-desktop.png");
     }
 
     #banner .navbar {
-        padding: .5rem 1rem;
+        padding: 20px 0 .5rem;
+    }
+
+    #banner .navbar .navbar-toggler,
+    #banner .navbar .navbar-brand,
+    #banner .navbar .shopping {
+        padding: .5rem 0;
     }
 
     #banner .navbar-collapse.collapse {
@@ -640,9 +645,13 @@ hr {
         margin-right: 20px;
     }
 
+    #banner .navbar-brand {
+        text-align: left;
+    }
+
     .navbar-expand-lg .navbar-collapse {
         position: relative;
-        margin-right: 5rem;
+        margin-right: 4.5rem;
         justify-content: flex-end;
     }
 
@@ -665,6 +674,11 @@ hr {
     #banner .navbar .shopping {
         position: absolute;
         right: 1rem;
+    }
+
+    #banner .content {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #banner .content p {
@@ -748,41 +762,37 @@ hr {
         padding-right: 125px;
     }
 
-    #rodape .footer-blue .content h5 {
+    #rodape .footer-blue .container h5 {
         font-size: 1rem;
     }
 
-    #rodape .footer-blue .institucional ul li {
+    #rodape .footer-blue .container .institucional ul li {
         font-size: 11px;
     }
 
-    #rodape .footer-blue .seguro div {
-        width: 80%;
-    }
-
-    #rodape .footer-blue .seguro div img:first-child {
+    #rodape .footer-blue .container .seguro div img:first-child {
         width: 75px;
     }
 
-    #rodape .footer-blue .seguro div img:nth-child(2) {
+    #rodape .footer-blue .container .seguro div img:nth-child(2) {
         width: 60px;
     }
 
-    #rodape .footer-blue .content {
+    #rodape .footer-blue .container {
         width: 85%;
     }
 
-    #rodape .footer-blue .formas-pagamento,
-    #rodape .footer-blue .vtexomni {
+    #rodape .footer-blue .container .formas-pagamento,
+    #rodape .footer-blue .container .vtexomni {
         text-align: center;
     }
 
-    #rodape .footer-blue .formas-pagamento img {
+    #rodape .footer-blue .container .formas-pagamento img {
         width: 185px;
     }
 
-    #rodape .footer-blue .formas-pagamento div,
-    #rodape .footer-blue .vtexomni div {
+    #rodape .footer-blue .container .formas-pagamento div,
+    #rodape .footer-blue .container .vtexomni div {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -795,11 +805,7 @@ hr {
     }
 
     #rodape .footer-gray p {
-        margin: 0 auto;
-    }
-
-    #rodape .footer-gray .row div:nth-child(2) {
-        justify-content: center;
+        margin: 0;
     }
 
     #rodape .footer-gray .row div:nth-child(2) img {
@@ -810,11 +816,14 @@ hr {
         position: fixed;
         right: -3px;
         bottom: 10%;
+
         width: 80px;
         padding: 0px 15px 8px;
+
         font-family: Fabriga-Black;
         text-align: center;
         line-height: 11px;
+        
         background-color: var(--cinza-claro);
         border-top-left-radius: 14px;
         border-bottom-left-radius: 14px;
