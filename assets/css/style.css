@@ -71,7 +71,11 @@ p {
     color: var(--cinza);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: Fabriga-Black;
     color: var(--cinza-black);
 }
@@ -219,6 +223,21 @@ hr {
     background-color: #f0f0f0;
 }
 
+.carousel {
+    width: 100%;
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: .5rem;
+}
+
 #produtos .content {
     padding-bottom: 70px;
 }
@@ -277,23 +296,24 @@ hr {
 }
 
 #produtos .content .carousel-inner {
-    width: 400px;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
 }
 
 #produtos .content .card {
     width: 100%;
     height: 370px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1), 0 0 12px rgba(0, 0, 0, 0.1)
 }
 
 #produtos .content .card .wrap-image {
-    display: block;
-    height: 265px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
 }
 
 #produtos .content .card .wrap-image img {
-    max-height: 240px;
+    max-height: 230px;
     margin: 0 auto;
 }
 
@@ -473,14 +493,8 @@ hr {
     color: #fff;
 }
 
-#rodape .footer-blue .seguro div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 #rodape .footer-blue .seguro div img:nth-child(2) {
-    margin: 0 10px;
+    margin-left: 10%;
 }
 
 #rodape .footer-blue .formas-pagamento img {
@@ -516,7 +530,31 @@ hr {
     justify-content: space-around;
 }
 
-/* Large devices (desktops, 992px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box .card {
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slide-box .card {
+        -ms-flex: 0 0 32%;
+        flex: 0 0 32%;
+        max-width: 32%;
+    }
+
+    #produtos .content .card .card-body p {
+        height: 50px;
+        margin-bottom: 0;
+    }
+
+    #produtos .content .card .wrap-image img {
+        max-height: 200px; 
+    }
+}
+
 @media (min-width: 992px) {
     .box-scroll {
         position: absolute;
@@ -530,14 +568,14 @@ hr {
     }
 
     .scroll-down {
-        padding: 8px 4px;
+        padding: 10px 4px;
         border: 2px solid #fff;
         border-radius: 7px;
     }
 
     .dash {
         position: relative;
-        padding: 0px 4px 0 3px;
+        padding: 0px 4px 0 2px;
 
         font-size: 10px;
         background-color: #fff;
@@ -551,6 +589,7 @@ hr {
         0% {
             top: -7px;
         }
+
         100% {
             top: 4px;
         }
@@ -636,6 +675,17 @@ hr {
         display: inline;
     }
 
+    .slide-box .card {
+        -ms-flex: 0 0 24%;
+        flex: 0 0 24%;
+        max-width: 24%;
+    }
+
+    #produtos .content .card .wrap-image img {
+        width: 98%;
+        max-height: auto;
+    }
+
     #diferenciais .content h2 {
         margin-bottom: 20px;
     }
@@ -697,7 +747,7 @@ hr {
     #newsletter .container .form-group input {
         padding-right: 125px;
     }
-    
+
     #rodape .footer-blue .content h5 {
         font-size: 1rem;
     }
@@ -728,7 +778,7 @@ hr {
     }
 
     #rodape .footer-blue .formas-pagamento img {
-        width: 80%;
+        width: 185px;
     }
 
     #rodape .footer-blue .formas-pagamento div,
@@ -754,5 +804,31 @@ hr {
 
     #rodape .footer-gray .row div:nth-child(2) img {
         margin: 0 20px;
+    }
+
+    .voltar-ao-topo {
+        position: fixed;
+        right: -3px;
+        bottom: 10%;
+        width: 80px;
+        padding: 0px 15px 8px;
+        font-family: Fabriga-Black;
+        text-align: center;
+        line-height: 11px;
+        background-color: var(--cinza-claro);
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        box-shadow: 0 0 12px 0 #6c757d;
+    }
+
+    .voltar-ao-topo a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .voltar-ao-topo a i {
+        display: block;
+        font-size: 26px;
     }
 }
